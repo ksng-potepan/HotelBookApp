@@ -13,10 +13,10 @@
     <%= f.file_field :image %>
 
     <p>名前</p>
-    <%= f.text_field :username %>
+    <%= f.text_field :username, value: @user.username %>
 
     <p>自己紹介</p>
-    <%= f.text_field :introduce %>
+    <%= f.text_field :introduce, value: @user.introduce %>
 
     <%= f.submit "更新" %>
 <% end %>
