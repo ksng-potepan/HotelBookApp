@@ -143,3 +143,56 @@ button {
     width: 25%;
     z-index: 10;
 }
+
+nav {
+    margin: 0px 550px;
+    width: 50%;
+}
+
+ul{
+    display: table;
+    width: 50%;
+    text-align: center;
+    background-color: #FFF2CC;
+    }
+    ul li{
+    display: table-cell;
+    min-width: 50px;
+    }
+    ul li a{
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+    }
+
+    ul li:hover{
+    background-color: #eae3cf;
+    }
+
+    .top {
+        display: flex;
+        margin: 30px 450px;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+    .edit {
+        margin-left: 230px;
+        color: rgb(64, 167, 133);
+        line-height: 50px;
+    }
+
+    table {
+        margin-left: 450px;
+        font-size: 20px;
+        border-collapse: separate;
+        border-spacing: 20px 5px;
+    }
+
+    td {
+        padding-top: 15px;
+        border-bottom:2px solid rgb(113, 149, 137);
+    }

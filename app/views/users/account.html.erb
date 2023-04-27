@@ -1,0 +1,24 @@
+<h2>ー 設定 ー</h2>
+
+<nav>
+    <ul>
+        <li class="current"><%= link_to "アカウント", users_account_path %></li>
+        <li><%= link_to "プロフィール", users_profile_path %></li>
+    </ul>
+</nav>
+
+<div class="top">
+    <h3 class="title">【 アカウント 】</h3>
+    <h3><%= link_to "編集", edit_user_registration_path, class: "edit" %></h3>
+</div>
+
+<table>
+    <tr>
+        <td>メールアドレス：</td>
+        <td><%= @user.email %></td>
+    </tr>
+    <tr>
+        <td>パスワード：</td>
+        <td>******</td>
+    </tr>
+</table>
