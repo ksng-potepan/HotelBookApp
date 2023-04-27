@@ -1,2 +1,28 @@
-<h1>Users#profile</h1>
-<p>Find me in app/views/users/profile.html.erb</p>
+<h2>ー 設定 ー</h2>
+
+<nav>
+    <ul>
+        <li><%= link_to "アカウント", users_account_path %></li>
+        <li><%= link_to "プロフィール", users_profile_path %></li>
+    </ul>
+</nav>
+
+<div class="top">
+    <h3 class="title">【 プロフィール 】</h3>
+    <h3><%= link_to "編集", users_profile_edit_path, class: "edit" %></h3>
+</div>
+
+<table>
+    <tr>
+        <td>アイコン：</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>名前：</td>
+        <td><%= @user.username %></td>
+    </tr>
+    <tr>
+        <td>自己紹介：</td>
+        <td><%= @user.introduce %></td>
+    </tr>
+</table>

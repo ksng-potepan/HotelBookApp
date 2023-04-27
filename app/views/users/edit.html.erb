@@ -1,2 +1,24 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h2>ー 編集 ー</h2>
+
+<nav>
+    <ul>
+        <li><%= link_to "アカウント", users_account_path %></li>
+        <li><%= link_to "プロフィール", users_profile_path %></li>
+    </ul>
+</nav>
+
+<%= form_with url: users_profile_update_path,class: "form" do |f| %>
+
+    <p>アイコン</p>
+
+
+    <p>名前</p>
+    <%= f.text_field :username %>
+
+    <p>自己紹介</p>
+    <%= f.text_field :introduce %>
+
+    <%= f.submit "更新" %>
+<% end %>
+
+<%= link_to "キャンセル", :back, {class: "button"} %>
