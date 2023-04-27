@@ -1,15 +1,61 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+    margin: 0;
+    font-family: ヒラギノ丸ゴ Pro,sans-serif;
+    color: rgb(79, 82, 86);
+}
+
+.top-image {
+    background-image: url('background.jpg');
+    height: 650px;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: rgb(79, 82, 86);
+}
+
+header {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(95, 158, 160, 0.603);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.header-logo {
+    font-size: 30px;
+    padding-left: 90px;
+}
+
+.header-menu {
+    float: right;
+    font-size: 20px;
+    padding-right: 50px;
+}
+
+.notice {
+    background-color: rgba(22, 100, 218, 0.726);
+    border: 1px solid transparent;
+    width: 100%;
+    margin-top: 70px;
+    text-align: center;
+    padding: 5px 10px;
+    color: aliceblue;
+    position: fixed;
+}
+
+.alert {
+    background-color: rgba(220, 20, 60, 0.726);
+    border: 1px solid transparent;
+    width: 100%;
+    margin-top: 70px;
+    text-align: center;
+    padding: 5px 10px;
+    color: aliceblue;
+    position: fixed;
+}
