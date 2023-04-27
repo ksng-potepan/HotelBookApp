@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   def update
     @user = current_user
-    @user.update(username: params[:username], introduce: params[:introduce])
+    @user.update(username: params[:username], introduce: params[:introduce], image: params[:image])
     if @user.save
       flash[:notice] = "更新しました"
       redirect_to action: "profile"

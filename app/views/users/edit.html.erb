@@ -10,7 +10,7 @@
 <%= form_with url: users_profile_update_path,class: "form" do |f| %>
 
     <p>アイコン</p>
-
+    <%= f.file_field :image %>
 
     <p>名前</p>
     <%= f.text_field :username %>
