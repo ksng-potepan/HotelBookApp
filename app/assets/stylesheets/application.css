@@ -180,19 +180,6 @@ button {
     line-height: 50px;
 }
 
-/* table {
-    margin: auto;
-    font-size: 20px;
-    border-collapse: separate;
-    border-spacing: 20px 5px;
-    width: 50%;
-}
-
-td {
-    padding-top: 15px;
-    border-bottom:2px solid rgb(113, 149, 137);
-} */
-
 .menu > li {
     float: left;
     width: 100%;
@@ -310,4 +297,14 @@ td {
 
 table th, table td {
     border-bottom: solid 1px rgb(152, 161, 166);
+}
+
+.show-table {
+    width: 40%;
+    border: 2px solid  rgb(167, 40, 103);
+}
+
+.show-table th {
+    width: 30%;
+    background-color: rgb(245, 214, 230);
 }
