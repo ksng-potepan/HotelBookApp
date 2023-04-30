@@ -42,6 +42,11 @@ class RoomsController < ApplicationController
     end
   end
 
+  def myroom
+    @user = current_user
+    @room = Room.where(user_id: current_user.id)
+  end
+
   private
   def room_params
     params.require(:room).permit(:accommodation, :guide, :charge, :address, :image)

@@ -1,0 +1,31 @@
+<h2>ー 登録済み一覧 ー</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>画像</th>
+                <th>施設名</th>
+                <th>紹介文</th>
+                <th>料金</th>
+                <th>作成日</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <% @room.each do |r| %>
+            <tbody>
+                <tr>
+                    <td><% if r.image.attached? %>
+                            <%= image_tag r.image, :size => '200x100' %>
+                        <% else %>
+                            <%= image_tag("default_room.png", :size => "200x100") %>
+                        <% end %></td>
+                    <td><%= link_to r.accommodation, room_path(r) %></td>
+                    <td><%= r.guide %></td>
+                    <td>¥<%= r.charge %></td>
+                    <td><%= r.created_at.strftime('%Y/%m/%d') %></td>
+                    <td></td>
+                    <td><%= link_to "編集", edit_room_path(@room) %></td>
+                </tr>
+            </tbody>
+        <% end %>
+    </table>

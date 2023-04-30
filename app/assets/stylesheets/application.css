@@ -180,7 +180,7 @@ button {
     line-height: 50px;
 }
 
-table {
+/* table {
     margin: auto;
     font-size: 20px;
     border-collapse: separate;
@@ -191,7 +191,7 @@ table {
 td {
     padding-top: 15px;
     border-bottom:2px solid rgb(113, 149, 137);
-}
+} */
 
 .menu > li {
     float: left;
@@ -287,4 +287,27 @@ li.menu__single:hover ul.menu__second-level {
     position: absolute;
     top: 490px;
     left: 1100px;
+}
+
+table {
+    background-color: rgb(251, 243, 235);
+    text-align: left;
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+}
+
+th {
+    background-color: rgb(251, 205, 227);
+    padding: 10px 20px;
+    color: rgb(58, 63, 67);
+}
+
+td {
+    padding:15px;
+    color: rgb(125, 132, 138);
+}
+
+table th, table td {
+    border-bottom: solid 1px rgb(152, 161, 166);
 }
