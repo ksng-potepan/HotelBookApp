@@ -5,6 +5,10 @@
     color: rgb(79, 82, 86);
 }
 
+ul li {
+    list-style: none;
+}
+
 .top-image {
     background-image: url('background.jpg');
     height: 650px;
@@ -35,8 +39,9 @@ header {
 
 .header-menu {
     float: right;
-    font-size: 20px;
-    padding-right: 50px;
+    width: 170px;
+    padding-right: 30px;
+    font-size: 17px;
 }
 
 .notice {
@@ -145,55 +150,80 @@ button {
     z-index: 10;
 }
 
-nav {
-    margin: 0px 550px;
-    width: 50%;
+
+
+.subvar {
+    background-color: #FFF2CC;
+    width: 20%;
+    height: 45px;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 40%;
 }
 
-ul{
-    display: table;
-    width: 50%;
-    text-align: center;
-    background-color: #FFF2CC;
-    }
-    ul li{
-    display: table-cell;
-    min-width: 50px;
-    }
-    ul li a{
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    text-decoration: none;
-    }
-
-    ul li:hover{
+.subvar p:hover{
     background-color: #eae3cf;
-    }
+}
 
-    .top {
-        display: flex;
-        margin: 30px 450px;
-    }
+.top {
+    display: flex;
+    margin: 30px 450px;
+}
 
-    .title {
-        font-size: 25px;
-    }
+.title {
+    font-size: 25px;
+}
 
-    .edit {
-        margin-left: 230px;
-        color: rgb(64, 167, 133);
-        line-height: 50px;
-    }
+.edit {
+    margin-left: 230px;
+    color: rgb(64, 167, 133);
+    line-height: 50px;
+}
 
-    table {
-        margin-left: 450px;
-        font-size: 20px;
-        border-collapse: separate;
-        border-spacing: 20px 5px;
-    }
+table {
+    margin-left: 450px;
+    font-size: 20px;
+    border-collapse: separate;
+    border-spacing: 20px 5px;
+}
 
-    td {
-        padding-top: 15px;
-        border-bottom:2px solid rgb(113, 149, 137);
-    }
+td {
+    padding-top: 15px;
+    border-bottom:2px solid rgb(113, 149, 137);
+}
+
+.menu > li {
+    float: left;
+    width: 100%;
+    height: 50px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.menu > li a:hover {
+    color: #e9e2e2;
+}
+
+ul.menu__second-level {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+
+.menu__second-level li {
+    border-bottom: 1px solid #675959;
+}
+
+.menu > li.menu__single {
+    position: relative;
+}
+
+li.menu__single ul.menu__second-level {
+    background-color: rgba(95, 158, 160, 0.897);
+}
+
+li.menu__single:hover ul.menu__second-level {
+    top: 50px;
+    visibility: visible;
+    opacity: 1;
+}

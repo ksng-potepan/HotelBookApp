@@ -18,16 +18,25 @@
 
     <% if user_signed_in? %>
       <div class="header-menu">
-        <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
 
-        <%= link_to users_account_path do %>
-        <% if @user.image.attached? %>
-          <%= image_tag @user.image, :size => '50x50' %>
-        <% else %>
-          <%= image_tag("default_user.png", :size => "50x50") %>
-        <% end %>
-        <%= @user.username %>
-        <% end %>
+      <ul class="menu">
+        <li class="menu__single">
+            <% if @user.image.attached? %>
+              <%= image_tag @user.image, :size => '50x50' %>
+            <% else %>
+              <%= image_tag("default_user.png", :size => "50x50") %>
+            <% end %>
+            <%= @user.username %>
+
+            <ul class="menu__second-level">
+                <li><%= link_to "施設の新規登録", new_room_path %></li>
+                <li>予約済み一覧</li>
+                <li>登録済み一覧</li>
+                <li><%= link_to "アカウント設定", users_account_path %></li>
+                <li><%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %></li>
+            </ul>
+        </li>
+      </ul>
 
       </div>
 

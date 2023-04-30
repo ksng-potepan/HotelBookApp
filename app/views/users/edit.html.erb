@@ -1,11 +1,9 @@
 <h2>ー 編集 ー</h2>
 
-<nav>
-    <ul>
-        <li><%= link_to "アカウント", users_account_path %></li>
-        <li><%= link_to "プロフィール", users_profile_path %></li>
-    </ul>
-</nav>
+<div class="subvar">
+    <p><%= link_to "アカウント", users_account_path %></p>
+    <p><%= link_to "プロフィール", users_profile_path %></p>
+</div>
 
 <%= form_with url: users_profile_update_path,class: "form" do |f| %>
 
