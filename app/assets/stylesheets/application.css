@@ -85,7 +85,7 @@ h2 {
     margin: auto;
     margin-top: 10px;
     width: 30%;
-    height: 350px;
+    height: 400px;
     background-color: rgba(255, 248, 242, 0.311);
     border: solid 2px rgb(255, 181, 218);
     border-radius: 20px;
@@ -109,7 +109,7 @@ input[type="submit"] {
     font-weight: bold;
     cursor: pointer;
     border: 2px solid  rgb(253, 199, 226);
-    margin-top: 25px;
+    margin-top: 10px;
     margin-left: 20px;
     float: right;
     background-color: rgb(253, 199, 226);
@@ -181,10 +181,11 @@ button {
 }
 
 table {
-    margin-left: 450px;
+    margin: auto;
     font-size: 20px;
     border-collapse: separate;
     border-spacing: 20px 5px;
+    width: 50%;
 }
 
 td {
@@ -226,4 +227,64 @@ li.menu__single:hover ul.menu__second-level {
     top: 50px;
     visibility: visible;
     opacity: 1;
+}
+
+.room-image{
+    margin-left: 30%;
+}
+
+.btn {
+    float: right;
+    margin-top: 15px;
+    margin-right: 28%;
+    font-size: 20px;
+}
+
+.search {
+    display: flex;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    background-color: rgba(140, 171, 173, 0.603);
+    padding-bottom: 10px;
+}
+
+.total {
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+.index-room {
+    float: left;
+    width: 25%;
+    height: 450px;
+    background: #fffde8;
+    box-shadow: 0px 0px 0px 10px #fffde8;
+    border: dashed 2px #ffb03f;
+    border-radius: 9px;
+    margin-left: 55px;
+    margin-bottom: 50px;
+    padding: 0.5em 0.5em 0.5em 2em;
+}
+
+.index-item {
+    margin-left: 220px;
+}
+
+.index-guide {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.pick {
+    position: absolute;
+    top: 450px;
+    left: 50px;
+    opacity: 0.85;
+}
+
+.area {
+    width: 20%;
+    position: absolute;
+    top: 490px;
+    left: 1100px;
 }

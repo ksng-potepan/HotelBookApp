@@ -1,2 +1,22 @@
 <div class="top-image">
 </div>
+
+<div class="pick">
+    <h3>おすすめエリア</h3>
+    <%= link_to image_tag("東京.png", size: '220x150'),"/rooms?area=東京" %>
+    <%= link_to image_tag("大阪.png", size: '220x150'),"/rooms?area=大阪" %>
+    <%= link_to image_tag("京都.png", size: '220x150'),"/rooms?area=京都" %>
+    <%= link_to image_tag("北海道.png", size: '220x150'),"/rooms?area=札幌" %>
+</div>
+
+<div class="area">
+        <h1>エリアを検索</h1>
+
+        <%= form_tag({controller:"rooms",action:"index"}, method: :get) do %>
+
+        <%= text_field_tag :area %>
+
+        <%= submit_tag '検索する' %>
+
+        <% end %>
+    </div>

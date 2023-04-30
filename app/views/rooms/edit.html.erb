@@ -1,2 +1,18 @@
-<h1>Rooms#edit</h1>
-<p>Find me in app/views/rooms/edit.html.erb</p>
+<h2>ー 施設の編集ー</h2>
+
+<div class="form">
+
+    <%= form_for @room do |f| %>
+
+    施設名<%= f.text_field :accommodation %>
+    施設詳細<%= f.text_field :guide %>
+    料金<%= f.text_field :charge %>
+    住所<%= f.text_field :address %>
+    施設画像<%= f.file_field :image %>
+
+    <input type="submit" value="保存" />
+    <%= link_to "キャンセル", :back, {class: "button"} %>
+
+    <% end %>
+
+</div>

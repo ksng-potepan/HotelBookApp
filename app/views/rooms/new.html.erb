@@ -1,2 +1,18 @@
-<h1>Rooms#new</h1>
-<p>Find me in app/views/rooms/new.html.erb</p>
+<h2>ー 施設の新規作成 ー</h2>
+
+<div class="form">
+
+<%= form_for @room do |f| %>
+
+  施設名<%= f.text_field :accommodation %>
+  施設詳細<%= f.text_field :guide %>
+  料金<%= f.text_field :charge %>
+  住所<%= f.text_field :address %>
+  施設画像<%= f.file_field :image %>
+
+    <input type="submit" value="保存" />
+    <%= link_to "キャンセル", "/", {class: "button"} %>
+
+<% end %>
+
+</div>
