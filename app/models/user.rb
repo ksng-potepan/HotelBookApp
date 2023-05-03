@@ -7,4 +7,5 @@ class User < ApplicationRecord
   validates :username, presence: true
   has_one_attached :image
   has_many :rooms, dependent: :destroy
+  has_many :reservations, dependent: :destroy
 end

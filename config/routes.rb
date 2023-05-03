@@ -10,4 +10,10 @@ Rails.application.routes.draw do
   root to: "home#top"
 
   resources :rooms
+
+  resources :reservations, only: [:index, :create] do
+    collection do
+      post :confirm
+    end
+  end
 end
