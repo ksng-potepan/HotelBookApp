@@ -24,7 +24,7 @@
                     <td width="100"><%= number_to_currency(r.charge, unit: "¥", format: "%u %n", strip_insignificant_zeros: true) %></td>
                     <td><%= r.created_at.strftime('%Y/%m/%d') %></td>
                     <td></td>
-                    <td><%= link_to "編集", edit_room_path(@room) %></td>
+                    <td><%= link_to "編集", edit_room_path(r) %></td>
                 </tr>
             </tbody>
         <% end %>
