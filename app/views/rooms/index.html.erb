@@ -28,7 +28,7 @@
         <h1><%= link_to r.accommodation, room_path(r) %></h1>
         <h3><%= r.address %></h3>
         <p class="index-guide"><%= r.guide %></p>
-        <h3 class="index-item">¥<%= r.charge %></h3>
+        <h3 class="index-item"><%= number_to_currency(r.charge, unit: "¥", format: "%u %n", strip_insignificant_zeros: true) %></h3>
         <h3 class="index-item"><%= link_to "詳細はこちら", room_path(r) %></h3>
         </div>
     <% end %>

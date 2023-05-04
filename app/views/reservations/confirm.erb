@@ -19,7 +19,7 @@
     </tr>
     <tr>
         <th>お支払い金額</th>
-        <td>¥ <%= @reservation.payment %> -</td>
+        <td><%= number_to_currency(@reservation.payment, unit: "¥", format: "%u %n", strip_insignificant_zeros: true) %>-</td>
     </tr>
 </table>
 

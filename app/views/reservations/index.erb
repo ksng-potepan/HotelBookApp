@@ -21,10 +21,10 @@
                         <% end %></td>
                     <td><%= link_to r.room.accommodation, "/rooms/:id" %></td>
                     <td><%= r.room.guide %></td>
-                    <td>¥<%= r.payment %></td>
+                    <td width="100"><%= number_to_currency(r.payment, unit: "¥", format: "%u %n", strip_insignificant_zeros: true) %></td>
                     <td><%= r.check_in.strftime('%Y/%m/%d') %></td>
                     <td><%= r.check_out.strftime('%Y/%m/%d') %></td>
-                    <td><%= r.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+                    <td width="150"><%= r.created_at.strftime('%Y/%m/%d %H:%M') %></td>
                 </tr>
             </tbody>
         <% end %>

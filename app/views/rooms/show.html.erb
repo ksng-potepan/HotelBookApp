@@ -26,7 +26,7 @@
         <td><%= @room.guide %></td>
     </tr>
     <tr>
-        <td>¥<%= @room.charge %></td>
+        <td><%= number_to_currency(@room.charge, unit: "¥", format: "%u %n", strip_insignificant_zeros: true) %></td>
     </tr>
     <tr>
         <td><%= @room.address %></td>

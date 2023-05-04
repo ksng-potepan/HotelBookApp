@@ -293,6 +293,7 @@ table {
     border-collapse: collapse;
     width: 95%;
     margin: auto;
+    font-size: 14px;
 }
 
 th {
@@ -302,7 +303,7 @@ th {
 }
 
 td {
-    padding:15px;
+    padding: 10px;
     color: rgb(125, 132, 138);
 }
 
