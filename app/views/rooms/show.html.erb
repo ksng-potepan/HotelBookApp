@@ -41,9 +41,9 @@
 
     <%= f.hidden_field :room_id, :value => @room.id %>
 
-    チェックイン日<%= f.date_field :check_in %>
-    チェックアウト日<%= f.date_field :check_out %>
-    人数<%= f.number_field :guest %>
+    チェックイン日<span>*</span><%= f.date_field :check_in %>
+    チェックアウト日<span>*</span><%= f.date_field :check_out %>
+    人数<span>*</span><%= f.number_field :guest %>
 
     <%= f.submit "予約する"%>
 

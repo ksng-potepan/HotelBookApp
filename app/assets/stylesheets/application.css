@@ -19,6 +19,10 @@ a {
     color: rgb(79, 82, 86);
 }
 
+span{
+    color: rgb(168, 6, 58);
+}
+
 header {
     height: 70px;
     position: fixed;
