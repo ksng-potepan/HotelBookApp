@@ -1,0 +1,37 @@
+<h2>予定内容の確認</h2>
+
+<table class="show-table">
+    <tr>
+        <th>チェックイン</th>
+        <td><%= @reservation.check_in.strftime('%Y/%m/%d') %></td>
+    </tr>
+    <tr>
+        <th>チェックアウト</th>
+        <td><%= @reservation.check_out.strftime('%Y/%m/%d') %></td>
+    </tr>
+    <tr>
+        <th>滞在日数</th>
+        <td><%= @staydays.to_i %>日</td>
+    </tr>
+    <tr>
+        <th>人数</th>
+        <td><%= @reservation.guest %>人</td>
+    </tr>
+    <tr>
+        <th>お支払い金額</th>
+        <td>¥ <%= @payment.to_i %> -</td>
+    </tr>
+</table>
+
+ <h3 class="confirmation">上記内容で正しければ「確定」ボタンを押してください。</h3>
+
+<div class="confirm">
+    <%= form_with model: @reservation, local: true, data: { turbo: false } do |f| %>
+        <%= f.hidden_field :room_id, :value => @room.id %>
+        <%= f.hidden_field :check_in %>
+        <%= f.hidden_field :check_out %>
+        <%= f.hidden_field :guest %>
+        <%= f.submit "確定"%>
+        <%= f.submit '戻る', name: 'back' %>
+    <% end %>
+</div>

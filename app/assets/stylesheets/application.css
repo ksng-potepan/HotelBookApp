@@ -217,13 +217,20 @@ li.menu__single:hover ul.menu__second-level {
 }
 
 .room-image{
-    margin-left: 30%;
+    margin-left: 2%;
 }
 
 .btn {
     float: right;
     margin-top: 15px;
-    margin-right: 28%;
+    margin-right: 35%;
+    font-size: 20px;
+}
+
+.hotel-btn {
+    position: absolute;
+    top: 140px;
+    left: 550px;
     font-size: 20px;
 }
 
@@ -280,7 +287,7 @@ table {
     background-color: rgb(251, 243, 235);
     text-align: left;
     border-collapse: collapse;
-    width: 90%;
+    width: 95%;
     margin: auto;
 }
 
@@ -307,4 +314,39 @@ table th, table td {
 .show-table th {
     width: 30%;
     background-color: rgb(245, 214, 230);
+}
+
+.hotel-table {
+    position: absolute;
+    top: 180px;
+    left: 540px;
+    width: 40%;
+    border: 2px solid  rgb(167, 40, 103);
+}
+
+.hotel-table th {
+    width: 30%;
+    background-color: rgb(245, 214, 230);
+}
+
+.reservation-form {
+    position: absolute;
+    top: 180px;
+    left: 1130px;
+    width: 17%;
+    height: 230px;
+    background-color: rgba(255, 248, 242, 0.311);
+    border: 2px solid  rgb(167, 40, 103);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.confirm {
+    width: 20%;
+    margin: auto;
+}
+
+.confirmation {
+    margin-top: 20px;
+    margin-left: 480px;
 }

@@ -1,14 +1,24 @@
 <h2>ー 施設詳細 ー</h2>
 <div class="room-image">
     <% if @room.image.attached? %>
-        <%= image_tag @room.image, :size => '580x330' %>
+        <%= image_tag @room.image, :size => '500x300' %>
     <% else %>
-        <%= image_tag("default_room.png") %>
+        <%= image_tag "default_room.png", :size => '500x300' %>
+    <% end %>
+</div>
+
+<div class="hotel-btn">
+    <%= link_to "☜ 戻る", :back %>
+
+    <% if user_signed_in? %>
+        <% if @room.user_id == current_user.id %>
+            <%= link_to "編集する", edit_room_path(@room) %>
+        <% end %>
     <% end %>
 </div>
 
 
-<table>
+<table class="hotel-table">
     <tr>
         <td><%= @room.accommodation %></td>
     </tr>
@@ -23,12 +33,19 @@
     </tr>
 </table>
 
-<div class="btn">
-    <% if user_signed_in? %>
-        <% if @room.user_id == current_user.id %>
-            <%= link_to "編集", edit_room_path(@room) %>
-        <% end %>
-    <% end %>
 
-<%= link_to "戻る", :back %>
+
+<div class="reservation-form">
+
+    <%= form_with model: @reservation, url: confirm_reservations_path, local: true, data: { turbo: false } do |f| %>
+
+    <%= f.hidden_field :room_id, :value => @room.id %>
+
+    チェックイン日<%= f.date_field :check_in %>
+    チェックアウト日<%= f.date_field :check_out %>
+    人数<%= f.number_field :guest %>
+
+    <%= f.submit "予約する"%>
+
+    <% end %>
 </div>
