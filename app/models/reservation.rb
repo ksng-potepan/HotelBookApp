@@ -5,6 +5,14 @@ class Reservation < ApplicationRecord
   validates :check_in, :check_out, :guest,:user_id, :room_id, presence: true
   validate :start_end_check
 
+  def staydays
+    (check_out - check_in)/86400
+  end
+
+  def payment
+    (guest * staydays * room.charge).to_i
+  end
+
   def start_end_check
     if self.check_in.nil?
         errors.add(:check_in, "を入力してください")

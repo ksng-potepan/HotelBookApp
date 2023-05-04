@@ -11,7 +11,7 @@
     </tr>
     <tr>
         <th>滞在日数</th>
-        <td><%= @staydays.to_i %>日</td>
+        <td><%= @reservation.staydays.to_i %>日</td>
     </tr>
     <tr>
         <th>人数</th>
@@ -19,7 +19,7 @@
     </tr>
     <tr>
         <th>お支払い金額</th>
-        <td>¥ <%= @payment.to_i %> -</td>
+        <td>¥ <%= @reservation.payment %> -</td>
     </tr>
 </table>
 

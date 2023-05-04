@@ -21,7 +21,7 @@
                         <% end %></td>
                     <td><%= link_to r.room.accommodation, "/rooms/:id" %></td>
                     <td><%= r.room.guide %></td>
-                    <td>あとで実装</td>
+                    <td>¥<%= r.payment %></td>
                     <td><%= r.check_in.strftime('%Y/%m/%d') %></td>
                     <td><%= r.check_out.strftime('%Y/%m/%d') %></td>
                     <td><%= r.created_at.strftime('%Y/%m/%d %H:%M') %></td>

@@ -4,8 +4,6 @@ class ReservationsController < ApplicationController
         @reservation = Reservation.new(reservation_params)
         @room = Room.find(reservation_params[:room_id])
         render 'rooms/show' if @reservation.invalid?
-        @staydays = (@reservation.check_out - @reservation.check_in)/86400
-        @payment = @reservation.room.charge * @reservation.guest * @staydays
     end
 
     def create
@@ -26,6 +24,6 @@ class ReservationsController < ApplicationController
 
     private
     def reservation_params
-        params.require(:reservation).permit(:check_in, :check_out, :guest, :room_id).merge(user_id: current_user.id)
+        params.require(:reservation).permit(:check_in, :check_out, :guest, :payment, :room_id).merge(user_id: current_user.id)
     end
 end
