@@ -2,11 +2,11 @@
 
 <div class="form">
 
-<%= form_for @room do |f| %>
+<%= form_with model: @room, local:true, data: { turbo: false } do |f| %>
 
   施設名<span>*</span><%= f.text_field :accommodation %>
   施設詳細<span>*</span><%= f.text_field :guide %>
-  料金<span>*</span><%= f.text_field :charge %>
+  料金<span>*</span><%= f.number_field :charge %>
   住所<span>*</span><%= f.text_field :address %>
   施設画像<%= f.file_field :image %>
 

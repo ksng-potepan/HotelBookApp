@@ -14,8 +14,10 @@ class RoomsController < ApplicationController
     @room = Room.new(room_params)
     @room.user_id = current_user.id
     if @room.save
+      flash[:notice] = "作成しました"
       redirect_to rooms_path(@room)
     else
+      flash.now[:alert] = "作成できませんでした"
       render ('rooms/new')
     end
 
@@ -37,8 +39,10 @@ class RoomsController < ApplicationController
     @room = Room.new(room_params)
     @room.user_id = current_user.id
     if @room.save
+      flash[:notice] = "更新しました"
       redirect_to room_path(@room)
     else
+      flash.now[:alert] = "更新できませんでした"
       render ('rooms/edit')
     end
   end

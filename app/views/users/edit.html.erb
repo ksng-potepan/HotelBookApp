@@ -5,18 +5,20 @@
     <p><%= link_to "プロフィール", users_profile_path %></p>
 </div>
 
-<%= form_with url: users_profile_update_path,class: "form" do |f| %>
+<div class="form">
+    <%= form_with url: users_profile_update_path, local:true, data: { turbo: false } do |f| %>
 
-    <p>アイコン</p>
-    <%= f.file_field :image %>
+        <p>アイコン</p>
+        <%= f.file_field :image %>
 
-    <p>名前</p>
-    <%= f.text_field :username, value: @user.username %>
+        <p>名前</p>
+        <%= f.text_field :username, value: @user.username %>
 
-    <p>自己紹介</p>
-    <%= f.text_field :introduce, value: @user.introduce %>
+        <p>自己紹介</p>
+        <%= f.text_field :introduce, value: @user.introduce %>
 
-    <%= f.submit "更新" %>
-<% end %>
+        <%= f.submit "更新" %>
+    <% end %>
 
-<%= link_to "キャンセル", :back, {class: "button"} %>
+    <%= link_to "キャンセル", :back, {class: "button"} %>
+</div>
