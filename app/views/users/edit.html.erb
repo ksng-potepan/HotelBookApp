@@ -1,0 +1,24 @@
+<h2>ー 編集 ー</h2>
+
+<div class="subvar">
+    <p><%= link_to "アカウント", users_account_path %></p>
+    <p><%= link_to "プロフィール", users_profile_path %></p>
+</div>
+
+<div class="form">
+    <%= form_with url: users_profile_update_path, local:true, data: { turbo: false } do |f| %>
+
+        <p>アイコン</p>
+        <%= f.file_field :image %>
+
+        <p>名前</p>
+        <%= f.text_field :username, value: @user.username %>
+
+        <p>自己紹介</p>
+        <%= f.text_field :introduce, value: @user.introduce %>
+
+        <%= f.submit "更新" %>
+    <% end %>
+
+    <%= link_to "キャンセル", :back, {class: "button"} %>
+</div>

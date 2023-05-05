@@ -1,0 +1,31 @@
+<h2>ー 予約済み一覧 ー</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>画像</th>
+                <th>施設名</th>
+                <th>紹介文</th>
+                <th>合計料金</th>
+                <th>チェックイン</th>
+                <th>チェックアウト</th>
+                <th>予定確定日時</th>
+            </tr>
+        </thead>
+        <% @reservation.each do |r| %>
+            <tbody>
+                <tr>
+                    <td><% if r.room.image.attached? %>
+                            <%= image_tag r.room.image, :size => '150x100' %>
+                        <% else %>
+                            <%= image_tag("default_room.png", :size => "150x100") %>
+                        <% end %></td>
+                    <td><%= link_to r.room.accommodation, "/rooms/:id" %></td>
+                    <td><%= r.room.guide %></td>
+                    <td width="100"><%= number_to_currency(r.payment, unit: "¥", format: "%u %n", strip_insignificant_zeros: true) %></td>
+                    <td><%= r.check_in.strftime('%Y/%m/%d') %></td>
+                    <td><%= r.check_out.strftime('%Y/%m/%d') %></td>
+                    <td width="150"><%= r.created_at.strftime('%Y/%m/%d %H:%M') %></td>
+                </tr>
+            </tbody>
+        <% end %>
+    </table>

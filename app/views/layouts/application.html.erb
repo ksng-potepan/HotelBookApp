@@ -10,7 +10,54 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+<body>
+  <header>
+    <div class="header-logo">
+      <%= link_to "宿泊予約アプリ", root_path %>
+    </div>
+
+    <% if user_signed_in? %>
+      <div class="header-menu">
+
+      <ul class="menu">
+        <li class="menu__single">
+            <% if @user.image.attached? %>
+              <%= image_tag @user.image, :size => '50x50' %>
+            <% else %>
+              <%= image_tag("default_user.png", :size => "50x50") %>
+            <% end %>
+            <%= @user.username %>
+
+            <ul class="menu__second-level">
+                <li><%= link_to "施設の新規登録", new_room_path %></li>
+                <li><%= link_to "予約済み一覧", reservations_path %></li>
+                <li><%= link_to "登録済み一覧", rooms_myroom_path %></li>
+                <li><%= link_to "アカウント設定", users_account_path %></li>
+                <li><%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %></li>
+            </ul>
+        </li>
+      </ul>
+
+      </div>
+
+    <% else %>
+
+      <div class="header-menu">
+        <%= link_to "ログイン", new_user_session_path %>
+        <%= link_to "新規作成", new_user_registration_path %>
+      </div>
+
+    <% end %>
+  </header>
+
+    <% if flash[:notice]%>
+      <div class="notice"><%= flash[:notice]%></div>
+    <% end %>
+
+    <% if flash[:alert]%>
+      <div class="alert"><%= flash[:alert]%></div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

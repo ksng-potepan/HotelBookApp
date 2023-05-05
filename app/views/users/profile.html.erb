@@ -1,0 +1,31 @@
+<h2>ー 設定 ー</h2>
+
+<div class="subvar">
+    <p><%= link_to "アカウント", users_account_path %></p>
+    <p><%= link_to "プロフィール", users_profile_path %></p>
+</div>
+
+<div class="top">
+    <h3 class="title">【 プロフィール 】</h3>
+    <h3><%= link_to "編集", users_profile_edit_path, class: "edit" %></h3>
+</div>
+
+<table class="show-table">
+    <tr>
+        <th>アイコン：</th>
+        <td><% if @user.image.attached? %>
+                <%= image_tag @user.image, :size => '50x50' %>
+            <% else %>
+                <%= image_tag("default_user.png", :size => "50x50") %>
+            <% end %>
+        </td>
+    </tr>
+    <tr>
+        <th>名前：</th>
+        <td><%= @user.username %></td>
+    </tr>
+    <tr>
+        <th>自己紹介：</th>
+        <td><%= @user.introduce %></td>
+    </tr>
+</table>
