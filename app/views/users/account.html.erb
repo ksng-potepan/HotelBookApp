@@ -1,0 +1,22 @@
+<h2>ー 設定 ー</h2>
+
+<div class="subvar">
+    <p><%= link_to "アカウント", users_account_path %></p>
+    <p><%= link_to "プロフィール", users_profile_path %></p>
+</div>
+
+<div class="top">
+    <h3 class="title">【 アカウント 】</h3>
+    <h3><%= link_to "編集", edit_user_registration_path, class: "edit" %></h3>
+</div>
+
+<table class="show-table">
+    <tr>
+        <th>メールアドレス：</th>
+        <td><%= @user.email %></td>
+    </tr>
+    <tr>
+        <th>パスワード：</th>
+        <td>******</td>
+    </tr>
+</table>

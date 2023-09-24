@@ -1,0 +1,18 @@
+<h2>ー 施設の編集ー</h2>
+
+<div class="form">
+
+    <%= form_with model: @room, local:true, data: { turbo: false } do |f| %>
+
+    施設名<span>*</span><%= f.text_field :accommodation %>
+    施設詳細<span>*</span><%= f.text_field :guide %>
+    料金<span>*</span><%= f.number_field :charge %>
+    住所<span>*</span><%= f.text_field :address %>
+    施設画像<span>*</span><%= f.file_field :image %>
+
+    <input type="submit" value="保存" />
+    <%= link_to "キャンセル", :back, {class: "button"} %>
+
+    <% end %>
+
+</div>
